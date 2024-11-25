@@ -1,0 +1,17 @@
+<div class="all-todos">
+  <div class="btn-sec">
+    <button class="add-task-btn" (click)="onAddTask()">Add Task</button>
+  </div>
+  <div *ngFor="let task of tasks; let i = index">
+    <div class="task-card">
+      <div>
+        {{ task.title }}
+        <p>{{ task.description }}</p>
+      </div>
+      <div>
+        <button class="edit-btn" (click)="onEditTask(task.id)">Edit</button>
+        <button class="del-btn" (click)="onDeleteTask(task.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

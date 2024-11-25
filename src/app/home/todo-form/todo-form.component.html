@@ -1,0 +1,43 @@
+<div class="overlay">
+  <div class="todo-form">
+    <form [formGroup]="todoForm" (ngSubmit)="onTodoFormSubmit()">
+      <div class="form">
+        <div class="form-section">
+          <label>Task Title:</label>
+          <input formControlName="title" />
+        </div>
+        <div *ngIf="todoForm.get('title')?.invalid && (todoForm.get('title')?.touched || todoForm.get('title')?.dirty)">
+          <div *ngIf="todoForm.get('title')?.errors?.['required']; else alphabeticTitleError" class="err-msg">
+            Title is required
+          </div>
+          <ng-template #alphabeticTitleError>
+            <div *ngIf="todoForm.get('title')?.errors?.['alphabetic']" class="err-msg">
+              Please Enter Only alphabets
+            </div>
+          </ng-template>
+        </div>
+
+        <div class="form-section">
+          <label>Task Description:</label>
+          <textarea formControlName="description"></textarea>
+        </div>
+        <div *ngIf="todoForm.get('description')?.invalid && (todoForm.get('description')?.touched || todoForm.get('description')?.dirty)">
+          <div *ngIf="todoForm.get('description')?.errors?.['required']; else alphabeticDescError" class="err-msg">
+            Description is required
+          </div>
+          <ng-template #alphabeticDescError>
+            <div *ngIf="todoForm.get('description')?.errors?.['alphabetic']" class="err-msg">
+              Please Enter Only alphabets
+            </div>
+          </ng-template>
+        </div>
+        <div>
+          <button type="submit" [disabled]="todoForm.invalid" *ngIf="!isTaskUpdate">Add Task</button>
+          <button type="submit" [disabled]="todoForm.invalid" *ngIf="isTaskUpdate">Update Task</button>
+          <button type="button" (click)="onClose()" class="close-btn">Cancel</button>
+
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

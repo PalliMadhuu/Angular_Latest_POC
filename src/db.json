@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": "5a2a",
+      "userName": "madhu",
+      "emailId": "madhu.palli@cognine.com",
+      "password": "12345678",
+      "cnfmPswd": "12345678"
+    },
+    {
+      "id": "0a82",
+      "userName": "Kuswanth",
+      "emailId": "kuswanth.11@gmail.com",
+      "password": "Madhu@123",
+      "cnfmPswd": "Madhu@123"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "6e00",
+      "title": "Hello World",
+      "description": "This is Hello world",
+      "userId": "5a2a"
+    }
+  ]
+}

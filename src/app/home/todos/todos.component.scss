@@ -1,0 +1,35 @@
+.task-card{
+    position: relative;
+    border: 1px solid bisque;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    p{
+        margin-bottom: 0rem !important;
+        font-size: 11px ;
+    }
+    .edit-btn{
+        margin-right: 5px;
+    }
+}
+
+.add-task-btn{
+    border: 2px solid #6f6fae;
+    border-radius: 5px;
+    padding: 5px;
+    
+
+
+}
+.btn-sec{
+    display: grid;
+    margin-bottom: 5px;
+}
+
+  
+  
+

@@ -1,0 +1,70 @@
+/* Centering the dialog content */
+.mat-dialog-container {
+    padding: 20px;
+    max-width: 400px; /* Maximum width of the dialog */
+    text-align: center;
+    border-radius: 8px; /* Rounded corners for the dialog */
+  }
+  
+  /* Styling for the title */
+  h2.mat-dialog-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Styling for the action buttons container */
+  mat-dialog-actions {
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+  }
+  
+  /* Styling for the Cancel button */
+  button.mat-button {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-transform: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.mat-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Styling for the Delete button */
+  button.mat-button[color='warn'] {
+    background-color: #f44336; /* Red color for Delete button */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-transform: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.mat-button[color='warn']:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Optional: Add some space between the title and buttons */
+  .mat-dialog-title {
+    margin-bottom: 10px;
+  }
+
+  button{
+    border-radius: 5px;
+  }
+
+  .cancel-btn{
+    border:1px solid red;
+  }
+
+  .delete-btn{
+    border:1px solid cornflowerblue;
+  }
+  
